@@ -63,8 +63,8 @@ export class App extends Component {
 	}
 }
 
-function mapStateToProps(state){
-	return state;
+function mapStateToProps(state){ //the state in the redux store
+	return Object.assign({}, state)
 }
 
 export default connect(mapStateToProps, { increment, decrement })(App);
